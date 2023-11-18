@@ -130,7 +130,7 @@ differentialDrive.setMaxOutput(1.0);
     // here. Call these from Commands.
 
     public void Drive(double speed, double rotation) {
-        differentialDrive.arcadeDrive(speed, rotation);
+        differentialDrive.curvatureDrive(speed, rotation, true);
     }
 
 }

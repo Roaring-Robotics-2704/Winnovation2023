@@ -5,19 +5,28 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.AddressableLED;
+import edu.wpi.first.wpilibj.AddressableLEDBuffer;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 public class SUBUnderglow extends SubsystemBase {
+
+  AddressableLED lightStrand;
+  AddressableLEDBuffer lightBuffer;
+
   /** Creates a new SUBunderglow. */
   public SUBUnderglow() {
-    AddressableLED lightStrand = new AddressableLED(Constants.strandPort);
+    lightStrand = new AddressableLED(Constants.strandPort);
+    lightBuffer = new AddressableLEDBuffer(Constants.strandLength);
+
+    lightStrand.setLength(Constants.strandLength);
   }
 
   public void set_full_strand(int R,int G,int B){
     for(int i = 0; i<Constants.strandLength; i++){
-        lightStrand.set()
+        lightBuffer.setRGB(i,R,G,B);
     }
+    lightStrand.setData(lightBuffer);
   }
 
 

@@ -28,5 +28,7 @@ public class Constants {
     *   public static final int kRightMotor2Port = 3; 
     * }
     */ 
+    public static final int strandPort = -1;
+    public static final int strandLength = 0;
 }
 

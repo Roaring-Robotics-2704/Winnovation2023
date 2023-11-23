@@ -30,5 +30,8 @@ public class Constants {
     */ 
     public static final int strandPort = -1;
     public static final int strandLength = 0;
+
+    public static int[] yellowRGB = {255, 150, 0};
+    public static int[] blueRGB = {0,100,255};
 }
 

@@ -28,9 +28,9 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
  */
 public class Robot extends TimedRobot {
 
-    private Command m_autonomousCommand;
+    private Command mAutonomousCommand;
 
-    private RobotContainer m_robotContainer;
+    private RobotContainer mRobotContainer;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -40,7 +40,7 @@ public class Robot extends TimedRobot {
     public void robotInit() {
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
-        m_robotContainer = RobotContainer.getInstance();
+        mRobotContainer = RobotContainer.getInstance();
         HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_RobotBuilder);
     }
 
@@ -66,10 +66,12 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void disabledInit() {
+        //not needed
     }
 
     @Override
     public void disabledPeriodic() {
+        //not needed
     }
 
     /**
@@ -77,11 +79,11 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void autonomousInit() {
-        m_autonomousCommand = m_robotContainer.getAutonomousCommand();
+        mAutonomousCommand = mRobotContainer.getAutonomousCommand();
 
         // schedule the autonomous command (example)
-        if (m_autonomousCommand != null) {
-            m_autonomousCommand.schedule();
+        if (mAutonomousCommand != null) {
+            mAutonomousCommand.schedule();
         }
     }
 
@@ -90,6 +92,7 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void autonomousPeriodic() {
+        //no auto
     }
 
     @Override
@@ -98,8 +101,8 @@ public class Robot extends TimedRobot {
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        if (m_autonomousCommand != null) {
-            m_autonomousCommand.cancel();
+        if (mAutonomousCommand != null) {
+            mAutonomousCommand.cancel();
         }
     }
 
@@ -108,6 +111,7 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void teleopPeriodic() {
+        //not needed
     }
 
     @Override
@@ -121,6 +125,7 @@ public class Robot extends TimedRobot {
     */
     @Override
     public void testPeriodic() {
+        //not needed
     }
 
 }

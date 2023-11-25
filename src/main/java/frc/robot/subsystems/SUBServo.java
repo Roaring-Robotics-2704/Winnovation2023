@@ -4,8 +4,6 @@
 
 package frc.robot.subsystems;
 
-import java.nio.file.ClosedWatchServiceException;
-
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
@@ -16,7 +14,7 @@ public class SUBServo extends SubsystemBase {
   Servo clawServo = new Servo(3);
 
   public SUBServo() {
-    
+    //not needed
   }
 
   @Override

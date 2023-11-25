@@ -11,6 +11,7 @@
 
 package frc.robot;
 
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants.  This class should not be used for any other purpose.  All constants should be
@@ -35,5 +36,18 @@ public class Constants {
     *   public static final int kRightMotor2Port = 3; 
     * }
     */ 
-}
+    public static final class OIConstants{
+        public static final int kDriver1ControllerID = 0;
+        public static final int kDriver2ControllerID = 1;
+    }
 
+    public static final class ClawConstants{
+        public static final double kClawOpenMax = 0.97;
+        public static final double kClawCloseMin = 0.55;
+    }
+
+    public static final class MarkerConstants{
+        public static final double kMarkerVertical = 0;
+        public static final double kMarkerHorizontal = 90;
+    }
+}

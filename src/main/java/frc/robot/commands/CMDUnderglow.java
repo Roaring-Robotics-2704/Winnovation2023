@@ -5,6 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants;
 import frc.robot.subsystems.SUBUnderglow;
@@ -36,9 +37,11 @@ public class CMDUnderglow extends CommandBase {
   }
 
   int[] getBreatheColor(int[] yellow, int[] blue, double time){
-    double controlValue = Math.IEEEremainder(time, 2); //https://stackoverflow.com/questions/26671975/why-do-we-need-ieee-754-remainder
+    double controlValue = Math.sin(time); 
     double yellowness = MathUtil.clamp(controlValue,0,1);
     double blueness = MathUtil.clamp(-controlValue,0,1);
+    SmartDashboard.putNumber("blueness",blueness);
+    SmartDashboard.putNumber("yellowness", yellowness);
 
     int[] ret = {0,0,0};
     

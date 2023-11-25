@@ -21,14 +21,7 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public class Constants {
-    public static final double kP = 0.1;
-    public static final double kI = 0;
-    public static final double kD = 0;
-    public static final double kF = 0;
-    public static final int encoderChannelA = 4;
-    public static final int encoderChannelB = 5;
-    public static final int ArmTalonID = 3;
-    public static final double PIDTolerance = 5;
+
 
 
 
@@ -40,6 +33,17 @@ public class Constants {
     *   public static final int kRightMotor2Port = 3; 
     * }
     */ 
+    public static final class ArmConstants {
+        public static final double kP = 0.1;
+        public static final double kI = 0;
+        public static final double kD = 0;
+        public static final double kF = 0;
+        public static final int kEncoderChannelA = 4;
+        public static final int kEncoderChannelB = 5;
+        public static final int kArmTalonID = 3;
+        public static final double kPIDTolerance = 2;
+        public static final double kMaxHeight = -98;
+    }
     public static final class OIConstants{
         public static final int kDriver1ControllerID = 0;
         public static final int kDriver2ControllerID = 1;
@@ -47,11 +51,13 @@ public class Constants {
 
     public static final class ClawConstants{
         public static final double kClawOpenMax = 0.97;
-        public static final double kClawCloseMin = 0.55;
+        public static final double kClawCloseMin = 0.53;
     }
 
     public static final class MarkerConstants{
         public static final double kMarkerVertical = 0;
         public static final double kMarkerHorizontal = 90;
     }
+
+
 }

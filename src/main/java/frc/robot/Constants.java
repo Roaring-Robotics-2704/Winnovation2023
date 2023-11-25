@@ -25,6 +25,10 @@ public class Constants {
     public static final double kI = 0;
     public static final double kD = 0;
     public static final double kF = 0;
+    public static final int encoderChannelA = 4;
+    public static final int encoderChannelB = 5;
+    public static final int ArmTalonID = 3;
+    public static final double PIDTolerance = 5;
 
 
 

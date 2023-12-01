@@ -43,6 +43,9 @@ public class Constants {
         public static final int kArmTalonID = 3;
         public static final double kPIDTolerance = 2;
         public static final double kMaxHeight = -98;
+        public static final double k2cube = -80;
+        public static final double k1cube = -75;
+        public static final double kMinHeight = -3;
     }
     public static final class OIConstants{
         public static final int kDriver1ControllerID = 0;
